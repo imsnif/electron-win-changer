@@ -4,7 +4,6 @@ const { BrowserWindow } = require('electron')
 
 const showToggler = require('./lib/show-toggler')
 const windowSwitcher = require('./lib/window-switcher')
-const windowCloser = require('./lib/window-closer')
 
 module.exports = function WinChanger () {
   let state = {
@@ -12,7 +11,6 @@ module.exports = function WinChanger () {
   }
   return Object.assign(state,
     showToggler(state),
-    windowSwitcher(state),
-    windowCloser(state)
+    windowSwitcher(state)
   )
 }
